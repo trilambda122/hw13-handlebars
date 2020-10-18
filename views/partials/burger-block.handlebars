@@ -1,6 +1,16 @@
- <p>
+ {{!-- <p>
     <label>
-         <input name="group1" type="radio" />
+         <input name="burgers" type="radio" />
          <span>{{burger_name}}</span>
      </label>
-</p>
+</p> --}}
+
+<li>
+	{{burger_name}}
+
+	<button class="change-burger" data-id="{{id}}" data-burgerstate="{{devoured}}">
+		{{#if devoured}}MAKE AGAIN{{else}}EAT IT{{/if}}
+	</button>
+
+	<button class="delete-burger" data-id="{{this.id}}">DELETE!</button>
+</li>

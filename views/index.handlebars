@@ -1,54 +1,41 @@
 
-    <!-- Burgers EAT CARD -->
+    <!-- Burgers EATEN CARD -->
     <div class="row center-cols">
         <div class="col m4">
             <div class="card blue-grey darken-1">
                 <div class="card-content white-text">
-                    <span class="card-title">Burgers Ready</span>
-                    <form action="#">
+                    <span class="card-title">Burgers Eaten</span>
+                    <form action="/api/burgers/" method="put" id="eaten-form">
                         {{#each burgers}}
-                        {{>burger-block}}
+                        {{#if devoured}}
+                         {{>burger-block}}
+                        {{/if}}
                         {{/each}}
 
                     </form>
                 </div>
                 <div class="card-action">
-                    <a href="#">EAT A BURGER</a>
+                    <a href="#" type="submit" class="change-state">Make Burger Again</a>
                 </div>
 
 
 
             </div>
 
-            <!-- Burgers EATEN CARD -->
+            <!-- Burgers TO EAT CARD -->
             <div class="card blue-grey darken-1">
                 <div class="card-content white-text">
-                    <span class="card-title">Already Eaten</span>
+                    <span class="card-title">Eat one of these burgers!</span>
                     <form action="#">
-                        <p>
-                            <label>
-                            <input name="group1" type="radio" checked />
-                            <span>Chesse Burger</span>
-                          </label>
-                        </p>
-                        <p>
-                            <label>
-                            <input name="group1" type="radio" />
-                            <span>Royal with Cheese</span>
-                          </label>
-                        </p>
-                        <p>
-                            <label>
-                            <input class="with-gap" name="group1" type="radio"  />
-                            <span>BBQ Burger</span>
-                          </label>
-                        </p>
-                        <p>
-
+                          {{#each burgers}}
+                        {{#unless devoured}}
+                         {{>burger-block}}
+                        {{/unless}}
+                        {{/each}}
                     </form>
                 </div>
                 <div class="card-action">
-                    <a href="#">Try Again</a>
+                    <a href="#">Numm Numm this burger</a>
                 </div>
 
 
@@ -65,9 +52,9 @@
                 <div class="row">
                     <div class="input-field col s6">
                         <!-- <i class="material-icons prefix">account_circle</i> -->
-                        <input id="icon_prefix" type="text" class="validate">
-                        <label for="icon_prefix">Burger Name</label>
-                        <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                        <input id="newBurgerText" type="text" class="validate">
+                        <label for="newBurgerText">Burger Name</label>
+                        <button class="btn waves-effect waves-light" type="button" name="new-burger" id="newBugerBtn">Submit
                         <i class="material-icons right">send</i>
                       </button>
                     </div>
