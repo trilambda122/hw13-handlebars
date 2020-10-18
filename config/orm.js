@@ -88,6 +88,16 @@ const orm = {
         });
     },
 
+    deleteOne: (table, condition, cb) => {
+        const queryString = `DELETE FROM ${table} WHERE id=${condition}`;
+        connection.query(queryString, (err, result) => {
+            if (err) {
+                throw err;
+            }
+            console.log(queryString);
+            cb(result);
+        });
+    }
 
 
 
