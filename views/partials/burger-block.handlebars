@@ -1,20 +1,9 @@
 
+
+{{!-- create radio buttons for each burgers --}}
 <div>
 	<label>
-         <input name="burgersradio" type="radio" value="{{id}}"data-id="{{id}}" data-burgerstate="{{devoured}}" />
-         <span>{{burger_name}}</span>
+         <input  name="burgersradio" type="radio" value="{{id}}"data-id="{{id}}" data-burgerstate="{{devoured}}" />
+         <span class="white-text">{{burger_name}}</span>
      </label>
 </div>
-
-	{{!-- {{burger_name}}
-<a class="waves-effect waves-light btn m4 change-burger" 
-data-id="{{id}}" data-burgerstate="{{devoured}}">
-{{#if devoured}}MAKE AGAIN{{else}}EAT IT{{/if}}
-</a> --}}
-
-	{{!-- <button class="change-burger" data-id="{{id}}" data-burgerstate="{{devoured}}">
-		{{#if devoured}}MAKE AGAIN{{else}}EAT IT{{/if}}
-	</button>
-
-	<button class="delete-burger" data-id="{{this.id}}">DELETE!</button> --}}
-{{!--  </li> --}}
