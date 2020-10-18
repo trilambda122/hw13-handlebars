@@ -43,6 +43,15 @@ router.put("/api/burgers/:id", (request, response) => {
     });
 });
 
+router.delete("/api/cats/:id", (request, response) => {
+    const condition = { id: request.params.id };
 
+    burger.deleteOne(condition, (result) => {
+        if (result.affectedRows == 0) {
+            return response.status(404).end();
+        }
+        response.status(200).end();
+    });
+});
 
 module.exports = router;

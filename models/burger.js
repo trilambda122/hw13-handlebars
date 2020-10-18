@@ -21,11 +21,10 @@ let burger = {
 
     },
     deleteOne: function(condition, cb) {
-        orm.delete('burgers', condition, function(resposne) {
+        orm.deleteOne('burgers', condition.id, function(response) {
             cb(response);
         });
     }
-
 
 };
 
