@@ -1,27 +1,28 @@
 {
-    "name": "hw13-handlebars",
-    "version": "1.0.0",
-    "description": "",
-    "main": "server.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "node server.js",
-        "dev": "nodemon server.js"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/trilambda122/hw13-handlebars.git"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/trilambda122/hw13-handlebars/issues"
-    },
-    "homepage": "https://github.com/trilambda122/hw13-handlebars#readme",
-    "dependencies": {
-        "express": "^4.17.1",
-        "express-handlebars": "^5.1.0",
-        "mysql": "^2.18.1"
-    }
+  "name": "hw13-handlebars",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trilambda122/hw13-handlebars.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/trilambda122/hw13-handlebars/issues"
+  },
+  "homepage": "https://github.com/trilambda122/hw13-handlebars#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.1.0",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {},
+  "description": ""
 }
