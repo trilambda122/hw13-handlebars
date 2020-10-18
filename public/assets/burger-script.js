@@ -17,19 +17,18 @@ $(document).ready(function() {
         })
 
     });
-    // $('.change-state').on('click', function(event) {
-    //     event.preventDefault();
-    //     console.log('knife and fork clicked');
-    //     console.log(event);
 
-    // });
 
     $(function() {
         $(".change-burger").on("click", function(event) {
             event.preventDefault();
             console.log("BUTTON CLICKED!!");
-            var id = $(this).data("id");
-            var newBurger = $(this).data("burgerstate");
+
+            let id = $("input[name='burgersradio']:checked").val();
+            let newBurger = $("input[name='burgersradio']:checked").data('burgerstate');
+            console.log("the radio value is ")
+            console.log(id);
+
             if (newBurger === 1) {
                 var newBurgerState = {
                     devoured: 0
@@ -58,7 +57,9 @@ $(document).ready(function() {
     });
 
     $(".delete-burger").on("click", function(event) {
-        var id = $(this).data("id");
+
+        let id = $("input[name='burgersradio']:checked").val();
+
 
         // Send the DELETE request.
         $.ajax("/api/cats/" + id, {

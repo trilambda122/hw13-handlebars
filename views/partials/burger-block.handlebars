@@ -1,16 +1,20 @@
- {{!-- <p>
-    <label>
-         <input name="burgers" type="radio" />
+
+<div>
+	<label>
+         <input name="burgersradio" type="radio" value="{{id}}"data-id="{{id}}" data-burgerstate="{{devoured}}" />
          <span>{{burger_name}}</span>
      </label>
-</p> --}}
+</div>
 
-<li>
-	{{burger_name}}
+	{{!-- {{burger_name}}
+<a class="waves-effect waves-light btn m4 change-burger" 
+data-id="{{id}}" data-burgerstate="{{devoured}}">
+{{#if devoured}}MAKE AGAIN{{else}}EAT IT{{/if}}
+</a> --}}
 
-	<button class="change-burger" data-id="{{id}}" data-burgerstate="{{devoured}}">
+	{{!-- <button class="change-burger" data-id="{{id}}" data-burgerstate="{{devoured}}">
 		{{#if devoured}}MAKE AGAIN{{else}}EAT IT{{/if}}
 	</button>
 
-	<button class="delete-burger" data-id="{{this.id}}">DELETE!</button>
-</li>
+	<button class="delete-burger" data-id="{{this.id}}">DELETE!</button> --}}
+{{!--  </li> --}}
